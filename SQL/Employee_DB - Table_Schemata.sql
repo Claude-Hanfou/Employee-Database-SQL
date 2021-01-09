@@ -25,7 +25,7 @@ CREATE TABLE "dept_emp" (
     "emp_no" INT   NOT NULL,
     "dept_no" VARCHAR   NOT NULL,
     CONSTRAINT "pk_dept_emp" PRIMARY KEY (
-        "dept_no"
+        "emp_no"
      )
 );
 
@@ -52,12 +52,18 @@ CREATE TABLE "employees" (
 
 CREATE TABLE "salaries" (
     "emp_no" INT   NOT NULL,
-    "salary" INT   NOT NULL
+    "salary" INT   NOT NULL,
+    CONSTRAINT "pk_salaries" PRIMARY KEY (
+        "emp_no"
+     )
 );
 
 CREATE TABLE "titles" (
     "title_id" VARCHAR   NOT NULL,
-    "title" VARCHAR   NOT NULL
+    "title" VARCHAR   NOT NULL,
+    CONSTRAINT "pk_titles" PRIMARY KEY (
+        "title_id"
+     )
 );
 
 ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_emp_no" FOREIGN KEY("emp_no")
@@ -77,6 +83,8 @@ REFERENCES "employees" ("emp_no");
 
 ALTER TABLE "titles" ADD CONSTRAINT "fk_titles_title_id" FOREIGN KEY("title_id")
 REFERENCES "employees" ("emp_title_id");
+
+
 
 -- Query * FROM Each Table Confirming Data
 SELECT * FROM departments;
