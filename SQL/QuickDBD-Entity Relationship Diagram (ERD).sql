@@ -1,14 +1,4 @@
--- Data Engineering --
--- Drop Tables if Existing
-DROP TABLE IF EXISTS departments;
-DROP TABLE IF EXISTS dept_emp;
-DROP TABLE IF EXISTS dept_manager;
-DROP TABLE IF EXISTS employees;
-DROP TABLE IF EXISTS salaries;
-DROP TABLE IF EXISTS titles;
-
-
--- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/oDD6H3
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
@@ -78,10 +68,3 @@ REFERENCES "employees" ("emp_no");
 ALTER TABLE "titles" ADD CONSTRAINT "fk_titles_title_id" FOREIGN KEY("title_id")
 REFERENCES "employees" ("emp_title_id");
 
--- Query * FROM Each Table Confirming Data
-SELECT * FROM departments;
-SELECT * FROM dept_emp;
-SELECT * FROM dept_manager;
-SELECT * FROM employees;
-SELECT * FROM salaries;
-SELECT * FROM titles;
