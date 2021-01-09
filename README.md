@@ -35,9 +35,9 @@ The following information were extracted from the csv files
 
 In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 
-##### Common Salary Ranges for Employees.
+### Common Salary Ranges for Employees.
 
 ![alt text](https://github.com/Claude-Hanfou/Employee-Database-SQL/blob/main/Image/figure_1.png).PNG "Fig1")
 
-#### Average Salary by Title
+### Average Salary by Title
 ![alt text](https://github.com/Claude-Hanfou/Employee-Database-SQL/blob/main/Image/figure_2.png "fIG2")
